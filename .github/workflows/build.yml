@@ -93,6 +93,8 @@ jobs:
           git clone --depth=1 https://github.com/ahmedhanbal/anykernel anykernel-template
           rm -rf anykernel-template/.git
 
+          curl -LSs "https://raw.githubusercontent.com/ReSukiSU/ReSukiSU/refs/heads/main/kernel/setup.sh" | bash -s
+
       - name: Configure Git to Preserve Build Folders
         run: |
           # Add anykernel folders to .git/info/exclude so they won't be affected by checkout
